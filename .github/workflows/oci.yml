@@ -15,6 +15,9 @@ jobs:
           php-version: '8.1'
       - name: Install dependencies
         run: composer install
+      - name: Create private key file
+        run: |
+          echo "${{ secrets.OCI_PRIVATE_KEY }}" > /home/runner/work/oci-arm-host-capacity/oci-arm-host-capacity/andrew.petrachex@gmail.com-2026-03-04T14_25_23.858Z.pem
       - name: Run script
         env:
           OCI_CONFIG: ${{ secrets.OCI_CONFIG }}
