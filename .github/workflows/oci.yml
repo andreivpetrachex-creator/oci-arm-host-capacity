@@ -22,4 +22,5 @@ jobs:
         env:
           OCI_CONFIG: ${{ secrets.OCI_CONFIG }}
           OCI_PRIVATE_KEY: ${{ secrets.OCI_PRIVATE_KEY }}
+          OCI_SSH_PUBLIC_KEY: ${{ secrets.OCI_SSH_PUBLIC_KEY }}
         run: php index.php
